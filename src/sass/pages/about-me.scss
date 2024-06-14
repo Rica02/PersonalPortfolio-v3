@@ -1,0 +1,157 @@
+@use '../constants' as *;
+
+.about-me-container {
+  display: flex;
+  flex: 1;
+
+  @media #{$laptop} {
+    flex-direction: column;
+  }
+
+  .left-container {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 40px;
+    max-width: 1000px;
+
+    .info {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+
+      p {
+        font-size: $body;
+        white-space: pre-line;
+        line-height: 150%;
+        margin: 0;
+      }
+    }
+
+    .cards-group {
+      display: flex;
+      flex: 1;
+      margin-top: 20px;
+      width: 100%;
+      gap: 20px;
+      max-width: 1200px;
+    }
+
+    @media #{$laptop} {
+      padding: 25px;
+
+      .info {
+        padding: 0;
+      }
+      .cards-group {
+        flex-direction: column;
+        max-width: 500px;
+        margin: 20px auto 0 auto;
+      }
+    }
+  }
+
+  .right-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .img-container {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+
+      .img {
+        border: 1px solid black;
+        height: 400px;
+        max-width: 1000px;
+        width: 100%;
+      }
+    }
+
+    .bg-text-container {
+      display: flex;
+      width: 100%;
+      margin: 10px;
+
+      p {
+        font-size: 2vw;
+        margin: 0;
+      }
+    }
+
+    @media #{$laptop} {
+      .img-container {
+        .img {
+          height: 150px;
+        }
+      }
+      .bg-text-container {
+        justify-content: center;
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: $btnHover solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+    line-height: 150%;
+    // width: 225px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $btnHover;
+      transform: translateY(-10px);
+    }
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: $body;
+        font-weight: normal;
+      }
+      .icon {
+        font-size: $subheaderBig;
+        margin-right: 10px;
+        color: $highlightPink;
+      }
+
+      @media #{$mobile} {
+        h2 {
+          font-size: $bodySml;
+        }
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex: 1;
+      align-items: center;
+
+      p {
+        font-size: $bodySml;
+        margin: 0;
+        white-space: pre-line;
+      }
+
+      @media #{$mobile} {
+        p {
+          font-size: $bodySml;
+        }
+      }
+    }
+  }
+}

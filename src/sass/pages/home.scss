@@ -1,0 +1,174 @@
+@use '../constants' as *;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .top-container {
+    display: flex;
+    flex: 1;
+
+    .intro-container {
+      display: flex;
+      flex: 1.75;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $bgDarker;
+      text-align: center;
+      padding: 20px;
+
+      h1 {
+        font-weight: normal;
+        font-size: 38px;
+        margin: 0 0 15px 0;
+      }
+
+      p {
+        font-size: 28px;
+        margin: 0 0 15px 0;
+
+        &.name {
+          font-size: 35px;
+        }
+        &.titles {
+          line-height: 1.6em;
+        }
+      }
+    }
+
+    .helloWorld {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-end;
+
+      p {
+        font-size: 3.5vw;
+        margin: 30px 0;
+      }
+    }
+
+    @media #{$laptop} {
+      .helloWorld {
+        display: none;
+      }
+    }
+
+    @media #{$mobile} {
+      .intro-container {
+        position: relative;
+        padding-top: 50px;
+
+        h1 {
+          font-size: 25px;
+          margin: 0 0 15px 0;
+        }
+
+        p {
+          font-size: 16px;
+          margin: 0 0 15px 0;
+
+          &.name {
+            font-size: 20px;
+          }
+          &.titles {
+            line-height: 1.6em;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    background-color: $bgLighter;
+    align-items: center;
+    justify-content: center;
+
+    .button-group {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      width: 350px;
+      align-content: center;
+      justify-content: center;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 35px;
+        font-size: $body;
+        font-weight: bold;
+        background: none;
+        border: none;
+        border-radius: 6px;
+        color: $bgBase;
+        background-color: $highlightCyan;
+        margin: 8px 10px;
+        transition: all 0.25s linear;
+
+        &:hover {
+          cursor: pointer;
+          color: $highlightPink;
+          outline: $highlightCyan 1px solid;
+          outline-offset: 2.5px;
+        }
+
+        svg {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .mouse-icon {
+      display: flex;
+      color: white;
+      font-size: 32px;
+      margin-bottom: 20px;
+      transition: all 0.25s linear;
+      padding: 5px 0;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $highlightPink;
+        border-radius: 35%;
+      }
+    }
+
+    .helloWorldSml {
+      display: none;
+    }
+
+    @media #{$mobile} {
+      background-color: $bgDarker;
+
+      .button-group {
+        align-content: flex-start;
+        button {
+          font-size: 12px;
+          width: 120px;
+          height: 28px;
+        }
+      }
+
+      .helloWorldSml {
+        display: flex;
+        position: absolute;
+        font-size: 20px;
+        bottom: 0px;
+        right: 15px;
+      }
+    }
+
+    @media #{$tablet} {
+      .mouse-icon {
+        display: none;
+      }
+    }
+  }
+}

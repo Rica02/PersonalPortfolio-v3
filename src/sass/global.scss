@@ -1,0 +1,73 @@
+@use 'constants' as *;
+
+:root {
+  background-color: $bgBase;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: Roboto, 'Open Sans', sans-serif;
+}
+
+section {
+  color: white;
+  margin-right: $navbarWidth;
+
+  @media #{$mobile} {
+    margin-right: 0;
+  }
+}
+
+header {
+  // background-color: $bgLighter;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding-left: 120px;
+  margin-top: 40px;
+
+  h1 {
+    margin: 0;
+    font-size: $headerBig;
+  }
+
+  @media #{$mobile} {
+    height: 60px;
+    justify-content: center;
+    padding: 0;
+
+    h1 {
+      font-size: $headerSml;
+    }
+  }
+}
+
+// Text highlights
+.txtHighlightPink {
+  color: $highlightPink;
+}
+
+.txtHighlightCyan {
+  color: $highlightCyan;
+}
+
+// Background text
+.txtFaded {
+  font-family: monospace;
+  opacity: 0.2;
+  cursor: default;
+}
+
+// Blinking effect
+.blinking {
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}

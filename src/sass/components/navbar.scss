@@ -1,0 +1,164 @@
+@use '../constants' as *;
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: $navbarWidth;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 80px;
+  overflow-x: hidden;
+  background-color: $bgNavbar;
+
+  @media #{$mobile} {
+    display: none;
+  }
+
+  &-social-btns {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    margin-top: -70px;
+    transition: margin 0.3s linear;
+
+    &.show {
+      margin-top: 0px;
+    }
+  }
+
+  &-links-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 35px;
+  }
+
+  &-mobile {
+    display: none;
+    background-color: $bgNavbar;
+    position: fixed;
+    top: -200px;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: top 0.2s linear;
+
+    &.active {
+      top: 0px;
+    }
+
+    @media #{$mobile} {
+      display: flex;
+    }
+
+    &-links-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.nav-link {
+  margin: 5px 0;
+  direction: rtl;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  font-size: $body;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  .indicator {
+    display: none;
+  }
+
+  &:hover {
+    color: $highlightPink;
+    transform: translateX(3px);
+    .indicator {
+      display: inline-block;
+    }
+  }
+
+  &.active {
+    color: $highlightPink;
+    .indicator {
+      display: inline-block;
+    }
+  }
+}
+
+.social-btns {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding: 8px 5px;
+
+  div {
+    position: relative;
+
+    p {
+      display: flex;
+      opacity: 0;
+      position: absolute;
+      top: -32px;
+      left: -6px;
+      font-size: 12px;
+      color: $highlightCyan;
+      font-style: italic;
+      transition: all 0.25s linear;
+    }
+
+    .icon {
+      color: $highlightCyan;
+      font-size: 25px;
+      transition: all 0.25s linear;
+    }
+  }
+
+  div:hover {
+    p {
+      opacity: 1;
+    }
+    .icon {
+      cursor: pointer;
+      background-color: $btnHover;
+      border: $highlightCyan solid 1px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.menu-btn-mobile {
+  display: none;
+  font-size: 45px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  padding: 15px;
+
+  button {
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    font-size: $headerBig;
+  }
+
+  @media #{$mobile} {
+    display: block;
+  }
+}
