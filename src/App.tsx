@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import { NavProvider } from './context/NavContext';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
+import Skills from './pages/Skills';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Home />
       <AboutMe />
+      <Skills />
     </NavProvider>
   );
 }

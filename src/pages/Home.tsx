@@ -6,6 +6,7 @@ import { HiDocumentText } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { useNav } from '../hooks/useNav';
 import resumeFile from '../assets/resume.pdf';
+import comfImg from '../assets/comf.png';
 
 const Home = () => {
   const homeRef = useNav('home');
@@ -55,8 +56,11 @@ const Home = () => {
             </p>
           </div>
           {/* Background text */}
-          <div className="helloWorld">
+          <div className="bg-text-container">
             <HelloWorldText />
+            <div className="img-container">
+              <img src={comfImg} alt="drawing of me" />
+            </div>
           </div>
         </div>
         <div className="bottom-container">
@@ -103,7 +107,7 @@ const Home = () => {
           >
             <BsMouseFill />
           </div>
-          <div className="helloWorldSml">
+          <div className="bg-text-container-small">
             <HelloWorldText />
           </div>
         </div>

@@ -10,7 +10,7 @@ const AboutMe = () => {
     {
       icon: <GiBrain />,
       title: 'A LOVE FOR LEARNING',
-      desc: "I'm very curious about science, art, nature and technology. This curiosity keeps my mind engaged and has helped me succeed academically.",
+      desc: "I'm very curious about science, art, nature and technology. I've always enjoyed learning new things and keeping my mind enganged.",
     },
     {
       icon: <GiPaintBrush />,
@@ -69,45 +69,34 @@ const AboutMe = () => {
 
   return (
     <section id="aboutme" ref={aboutMeRef}>
-      <div className="container">
-        <header>
-          <h1>About me</h1>
-        </header>
-        <div className="about-me-container">
-          {/* Introduction */}
-          <div className="left-container">
-            <div className="info">
-              <p>
-                I studied a Bachelor of IT at Academy of Interactive Technology
-                (AIT) in Melbourne, Australia. I graduated in 2022 with an
-                Academic Excellence Award.
-                <br />
-                <br />
-                I've worked on a variety of projects, gaining diverse and
-                valuable skills encompassing web, mobile apps and games. I'm
-                particularly passionate about UI/UX design and development.
-                <br />
-                <br /> I'm continuously striving to improve, pushing myself out
-                of my comfort zone and tackle new challenges. I learned to be
-                flexible and open minded, as well as an effective team worker
-                and problem solver.
-              </p>
-            </div>
-            <div className="cards-group">
-              <Cards />
-            </div>
-          </div>
-          <div className="right-container">
-            {/* About me cards */}
-            <div className="img-container">
-              <div className="img">img</div>
-            </div>
-
-            {/* Background text */}
-            <div className="bg-text-container">
-              <ContinueText />
-            </div>
-          </div>
+      <header>
+        <h1>About me</h1>
+      </header>
+      <div className="about-me-container">
+        {/* Introduction */}
+        <div className="info">
+          <p className="name">I'm Rica, it's nice to meet you!</p>
+          <br />
+          <p>
+            I studied a Bachelor of IT at Academy of Interactive Technology
+            (AIT) in Melbourne, Australia. I graduated in 2022 with an Academic
+            Excellence Award. I have since worked on a variety of projects,
+            gaining diverse and valuable skills.
+            <br />
+            <br />
+            I'm continuously striving to improve, pushing myself out of my
+            comfort zone, and tackle new challenges. I learned to be flexible
+            and open minded, as well as an effective team worker and a problem
+            solver.
+          </p>
+        </div>
+        {/* About me cards */}
+        <div className="cards-group">
+          <Cards />
+        </div>
+        {/* Background text */}
+        <div className="bg-text">
+          <ContinueText />
         </div>
       </div>
     </section>

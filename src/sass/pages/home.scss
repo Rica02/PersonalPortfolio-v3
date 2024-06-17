@@ -37,20 +37,33 @@
       }
     }
 
-    .helloWorld {
+    .bg-text-container {
       display: flex;
+      flex-direction: column;
       flex: 1;
-      justify-content: center;
-      align-items: flex-end;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #222242;
 
       p {
-        font-size: 3.5vw;
-        margin: 30px 0;
+        font-size: 2.5vw;
+        margin: 40px 0 0 0;
+      }
+
+      .img-container {
+        display: flex;
+        overflow: hidden;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          max-height: 700px;
+        }
       }
     }
 
     @media #{$laptop} {
-      .helloWorld {
+      .bg-text-container {
         display: none;
       }
     }
@@ -140,7 +153,7 @@
       }
     }
 
-    .helloWorldSml {
+    .bg-text-container-small {
       display: none;
     }
 
@@ -156,7 +169,7 @@
         }
       }
 
-      .helloWorldSml {
+      .bg-text-container-small {
         display: flex;
         position: absolute;
         font-size: 20px;

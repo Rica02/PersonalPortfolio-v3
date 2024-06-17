@@ -27,15 +27,20 @@ header {
   align-items: center;
   height: 90px;
   padding-left: 120px;
-  margin-top: 40px;
+  padding-top: 40px;
 
   h1 {
     margin: 0;
     font-size: $headerBig;
   }
 
+  @media #{$tablet} {
+    padding-left: 0;
+    justify-content: center;
+  }
+
   @media #{$mobile} {
-    height: 60px;
+    height: 80px;
     justify-content: center;
     padding: 0;
 

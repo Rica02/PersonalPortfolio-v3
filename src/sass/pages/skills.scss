@@ -1,0 +1,151 @@
+@use '../constants' as *;
+
+.skills-header {
+  background-color: $bgDarker;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  background-color: $bgDarker;
+  overflow: hidden;
+
+  .top-container {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    max-width: 1250px;
+
+    .description {
+      display: flex;
+      flex: 1;
+      white-space: pre-line;
+
+      p {
+        font-size: $body;
+        max-width: 900px;
+        line-height: 150%;
+      }
+    }
+
+    .table-container {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      margin-left: 20px;
+
+      .skills-table {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 562px;
+        min-width: 562px;
+        overflow: hidden;
+        padding-bottom: 25px;
+
+        .table-row {
+          display: flex;
+          width: 100%;
+
+          &.left-to-right {
+            animation: scrollLeftToRight 10s linear infinite;
+            flex-direction: row-reverse;
+          }
+          &.right-to-left {
+            animation: scrollRightToLeft 10s linear infinite;
+          }
+          &:hover {
+            animation-play-state: paused;
+          }
+
+          .row-item {
+            position: relative;
+
+            img {
+              object-fit: contain;
+              min-width: 50px;
+              height: 50px;
+              margin: 15px 15px;
+              transition: all 0.25s;
+            }
+
+            p {
+              position: absolute;
+              width: 100%;
+              color: $txtSecondary;
+              font-size: 12px;
+              text-align: center;
+              margin: -8px 0 0 0;
+              display: none;
+              opacity: 0.6;
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.2);
+              }
+              p {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      @keyframes scrollRightToLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes scrollLeftToRight {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    @media #{$laptop} {
+      flex-direction: column;
+      width: 100%;
+
+      .description {
+        text-align: center;
+      }
+
+      .skills-table {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .bg-text {
+    display: flex;
+    align-self: flex-end;
+    padding: 30px;
+    width: 225px;
+
+    p {
+      font-size: 1.5vw;
+      margin: 0;
+    }
+
+    @media #{$laptop} {
+      align-self: center;
+      justify-content: flex-start;
+      width: 150px;
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
