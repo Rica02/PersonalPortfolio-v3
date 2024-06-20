@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../sass/components/project-modal.scss';
 import { IoCloseSharp } from 'react-icons/io5';
 import { FaPlay } from 'react-icons/fa';
@@ -13,13 +13,21 @@ interface ProjectModalProps {
 
 const ProjectModal = (props: ProjectModalProps) => {
   const [source, setSource] = useState<string | undefined>('');
+  const modalRef = useRef<any>(null);
 
   useEffect(() => {
     setSource(props.selectedProject?.gallery[props.selectedMedia].src);
   }, [props.selectedMedia, props]);
 
+  const changeSelectedMedia = (index: number) => {
+    props.setSelectedMedia(index);
+    if (modalRef.current) {
+      modalRef.current.scrollTop = 0;
+    }
+  };
+
   return (
-    <div className="container">
+    <div className="container" ref={modalRef}>
       <div className="header">
         <h2>{props.selectedProject?.title}</h2>
         <div className="icon">
@@ -54,7 +62,7 @@ const ProjectModal = (props: ProjectModalProps) => {
               <div
                 key={index}
                 className="video-container"
-                onClick={() => props.setSelectedMedia(index)}
+                onClick={() => changeSelectedMedia(index)}
               >
                 <FaPlay />
                 <video height={'100%'} width={'100%'}>
@@ -70,7 +78,7 @@ const ProjectModal = (props: ProjectModalProps) => {
               <img
                 src={media.src}
                 alt={`${props.selectedProject?.title} thumbnail`}
-                onClick={() => props.setSelectedMedia(index)}
+                onClick={() => changeSelectedMedia(index)}
               />
             )
           )}

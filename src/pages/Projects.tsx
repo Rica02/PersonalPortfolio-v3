@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../sass/pages/projects.scss';
 import { useNav } from '../hooks/useNav';
 import { Project } from '../interfaces';
@@ -10,6 +10,15 @@ const Projects = () => {
   const [modalActive, setModalActive] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedMedia, setSelectedMedia] = useState(1);
+
+  useEffect(() => {
+    // Disable scrolling while modal is open
+    if (modalActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [modalActive, selectedProject]);
 
   // On click, open project details modal
   const onProjectClick = (project: Project) => {

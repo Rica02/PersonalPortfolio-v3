@@ -28,17 +28,6 @@ import logoAffDes from './assets/logos/logo-affinity-designer.png';
 
 import ptMetaLogo from './assets/projects/pt-metaverse-logo.png';
 import ptMetaImg from './assets/projects/pt-metaverse-img.png';
-import ptGolfLogo from './assets/projects/pt-golf-logo.png';
-import ptGolfImg from './assets/projects/pt-golf-img.png';
-import ptAiLogo from './assets/projects/pt-ai-logo.png';
-import ptAiImg from './assets/projects/pt-ai-img.png';
-import scusamiLogo from './assets/projects/scusami-logo.png';
-import portfolioLogo from './assets/projects/portfolio-logo.png';
-import techConnectLogo from './assets/projects/techconnect-logo.png';
-import myStoryLogo from './assets/projects/mystory-logo.png';
-import articLogo from './assets/projects/artic-logo.png';
-import bookwormLogo from './assets/projects/bookwormden-logo.png';
-
 import ptMeta1 from './assets/projects/pt-metaverse-gallery-1.mp4';
 import ptMeta2 from './assets/projects/pt-metaverse-gallery-2.mp4';
 import ptMeta3 from './assets/projects/pt-metaverse-gallery-3.png';
@@ -49,6 +38,8 @@ import ptMeta7 from './assets/projects/pt-metaverse-gallery-7.png';
 import ptMeta8 from './assets/projects/pt-metaverse-gallery-8.png';
 import ptMeta9 from './assets/projects/pt-metaverse-gallery-9.png';
 
+import ptAiLogo from './assets/projects/pt-ai-logo.png';
+import ptAiImg from './assets/projects/pt-ai-img.png';
 import ptAi1 from './assets/projects/pt-ai-gallery-1.mov';
 import ptAi2 from './assets/projects/pt-ai-gallery-2.mov';
 import ptAi3 from './assets/projects/pt-ai-gallery-3.png';
@@ -56,21 +47,45 @@ import ptAi4 from './assets/projects/pt-ai-gallery-4.png';
 import ptAi5 from './assets/projects/pt-ai-gallery-5.png';
 import ptAi6 from './assets/projects/pt-ai-gallery-6.png';
 
+import ptGolfLogo from './assets/projects/pt-golf-logo.png';
+import ptGolfImg from './assets/projects/pt-golf-img.png';
 import ptGolf1 from './assets/projects/pt-golf-gallery-1.mp4';
 import ptGolf2 from './assets/projects/pt-golf-gallery-2.png';
 
+import scusamiLogo from './assets/projects/scusami-logo.png';
+import scusamiImg from './assets/projects/scusami-img.png';
 import scusami1 from './assets/projects/scusami-gallery-1.mov';
 import scusami2 from './assets/projects/scusami-gallery-2.png';
 import scusami3 from './assets/projects/scusami-gallery-3.png';
 
+import portfolioLogo from './assets/projects/portfolio-logo.png';
 import portfolio2 from './assets/projects/portfolio-gallery-2.png';
 
+import techConnectLogo from './assets/projects/techconnect-logo.png';
+import techConnectImg from './assets/projects/techconnect-img.png';
 import techConnect1 from './assets/projects/techconnect-gallery-1.mp4';
 import techConnect2 from './assets/projects/techconnect-gallery-2.png';
 import techConnect3 from './assets/projects/techconnect-gallery-3.png';
+import techConnect4 from './assets/projects/techconnect-gallery-4.png';
+import techConnect5 from './assets/projects/techconnect-gallery-5.png';
+
+import myStoryLogo from './assets/projects/mystory-logo.png';
+import myStoryImg from './assets/projects/mystory-img.png';
 import myStory1 from './assets/projects/mystory-gallery-1.mov';
+import myStory2 from './assets/projects/mystory-gallery-2.png';
+import myStory3 from './assets/projects/mystory-gallery-3.png';
+import myStory4 from './assets/projects/mystory-gallery-4.png';
+
+import articLogo from './assets/projects/artic-logo.png';
+import articImg from './assets/projects/artic-img.png';
 import artic1 from './assets/projects/artic-gallery-1.mp4';
+import artic2 from './assets/projects/artic-gallery-2.png';
+
+import bookwormLogo from './assets/projects/bookwormden-logo.png';
+import bookwormImg from './assets/projects/bookwormden-img.png';
 import bookworm1 from './assets/projects/bookwormden-gallery-1.mov';
+import bookworm2 from './assets/projects/bookwormden-gallery-2.png';
+import bookworm3 from './assets/projects/bookwormden-gallery-3.png';
 
 export const AboutMeCards: AboutMeCard[] = [
   {
@@ -200,7 +215,7 @@ export const ProjectList: Project[] = [
     ],
   },
   {
-    thumbnail: scusamiLogo,
+    thumbnail: scusamiImg,
     logo: scusamiLogo,
     title: 'Scusa Mi! App',
     description:
@@ -209,6 +224,7 @@ export const ProjectList: Project[] = [
     gallery: [
       { src: scusamiLogo, isVideo: false },
       { src: scusami1, isVideo: true },
+      { src: scusamiImg, isVideo: false },
       { src: scusami2, isVideo: false },
       { src: scusami3, isVideo: false },
     ],
@@ -226,21 +242,23 @@ export const ProjectList: Project[] = [
     ],
   },
   {
-    thumbnail: techConnectLogo,
+    thumbnail: techConnectImg,
     logo: techConnectLogo,
-    title: 'Tech Connect',
+    title: 'TechConnect',
     description:
       'TechConnect is a website that provides tutoring services to users wanting to learn about tech devices.',
     tools: ['JavaScript', 'React', 'Web', 'Zoom API'],
     gallery: [
       { src: techConnectLogo, isVideo: false },
       { src: techConnect1, isVideo: true },
-      { src: techConnect2, isVideo: false },
       { src: techConnect3, isVideo: false },
+      { src: techConnect2, isVideo: false },
+      { src: techConnect5, isVideo: false },
+      { src: techConnect4, isVideo: false },
     ],
   },
   {
-    thumbnail: myStoryLogo,
+    thumbnail: myStoryImg,
     logo: myStoryLogo,
     title: 'MyStory',
     description:
@@ -249,10 +267,13 @@ export const ProjectList: Project[] = [
     gallery: [
       { src: myStoryLogo, isVideo: false },
       { src: myStory1, isVideo: true },
+      { src: myStory2, isVideo: false },
+      { src: myStory3, isVideo: false },
+      { src: myStory4, isVideo: false },
     ],
   },
   {
-    thumbnail: articLogo,
+    thumbnail: articImg,
     logo: articLogo,
     title: 'Artic',
     description:
@@ -261,11 +282,13 @@ export const ProjectList: Project[] = [
     gallery: [
       { src: articLogo, isVideo: false },
       { src: artic1, isVideo: true },
+      { src: articImg, isVideo: false },
+      { src: artic2, isVideo: false },
     ],
   },
 
   {
-    thumbnail: bookwormLogo,
+    thumbnail: bookwormImg,
     logo: bookwormLogo,
     title: 'Bookworm Den',
     description:
@@ -274,6 +297,8 @@ export const ProjectList: Project[] = [
     gallery: [
       { src: bookwormLogo, isVideo: false },
       { src: bookworm1, isVideo: true },
+      { src: bookworm2, isVideo: false },
+      { src: bookworm3, isVideo: false },
     ],
   },
 ];

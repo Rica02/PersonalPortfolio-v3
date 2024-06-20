@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../sass/components/navbar.scss';
 import { IoCloseSharp, IoMenuSharp } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
@@ -12,6 +12,15 @@ const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false); // Opens extended menu when screen is small
 
   const navLinks = ['home', 'about me', 'skills', 'projects', 'contact me'];
+
+  useEffect(() => {
+    // Disable scrolling while extended navbar menu is open
+    if (extendNavbar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [extendNavbar]);
 
   const handleClickNav = (target: string) => {
     // Scroll to selection and close menu (if using extended menu)

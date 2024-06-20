@@ -88,11 +88,10 @@
       .see-demo-text {
         color: white;
         font-weight: bold;
-        background-color: $bgBase;
-        margin-top: 85px;
-        padding: 12px 20px;
-        border-radius: 15px;
-        border: 1px solid $highlightCyan;
+        background-color: $bgNavbar;
+        margin-top: 100px;
+        padding: 12px 25px;
+        border-radius: 25px;
       }
 
       &:hover {
@@ -152,7 +151,7 @@
     max-height: unset;
   }
 
-  @media #{$mobilePortraitOnly} {
+  @media #{$mobile} {
     top: 100%;
     left: 0;
     width: 100vw;
@@ -164,13 +163,13 @@
     opacity: 0;
     transform: none;
     // TODO: fix resizing bug (check position states)
-    transition: opacity 20s, top 0.5s ease-in-out, transform 0s;
+    transition: opacity 20s, top 0.25s ease-in-out, transform 0s;
 
     &.modal-active {
       opacity: 1;
       top: 0%;
       transform: none;
-      transition: opacity 0s, transform 0s, top 0.5s ease-in-out;
+      transition: opacity 0s, transform 0s, top 0.25s ease-in-out;
     }
   }
 }
