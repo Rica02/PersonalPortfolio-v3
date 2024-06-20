@@ -1,41 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import '../sass/pages/about-me.scss';
 import { useNav } from '../hooks/useNav';
-import { GiBrain, GiPaintBrush, GiBookPile } from 'react-icons/gi';
+import { AboutMeCards } from '../content';
 
 const AboutMe = () => {
   const aboutMeRef = useNav('aboutme');
-
-  const cardContent = [
-    {
-      icon: <GiBrain />,
-      title: 'A LOVE FOR LEARNING',
-      desc: "I'm very curious about science, art, nature and technology. I've always enjoyed learning new things and keeping my mind enganged.",
-    },
-    {
-      icon: <GiPaintBrush />,
-      title: 'ENGAGING HOBBIES',
-      desc: "Outside my usual activities, I'm a hobbyist digital and vector artist, a casual gamer, a beginner runner and a blue belt in Taekwondo.",
-    },
-    {
-      icon: <GiBookPile />,
-      title: 'OBSESSIVELY ORGANISED',
-      desc: "I'm all for maximising efficiency and productivity, so I like to keep things around me organised and get even the small details right.",
-    },
-  ];
 
   // Returns the 3 cards in About Me page
   const Cards = () => {
     return (
       <>
-        {cardContent.map((card, index) => (
+        {AboutMeCards.map((card, index) => (
           <div className="card" key={index}>
             <div className="card-title">
               <div className="icon">{card.icon}</div>
               <h2>{card.title}</h2>
             </div>
             <div className="card-description">
-              <p>{card.desc}</p>
+              <p>{card.description}</p>
             </div>
           </div>
         ))}

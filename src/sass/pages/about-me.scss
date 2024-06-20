@@ -27,23 +27,11 @@
   .cards-group {
     display: flex;
     flex: 1;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     gap: 20px;
     padding: 0 25px;
     max-width: 1250px;
-  }
-
-  .bg-text {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 30px;
-
-    p {
-      font-size: 1.5vw;
-      margin: 0;
-    }
   }
 
   @media #{$tablet} {
@@ -63,15 +51,6 @@
     }
   }
 
-  @media #{$laptop} {
-    .bg-text {
-      justify-content: center;
-      p {
-        font-size: 20px;
-      }
-    }
-  }
-
   .card {
     display: flex;
     flex-direction: column;
@@ -85,6 +64,7 @@
     transition: all 0.3s;
 
     &:hover {
+      border-color: $highlightCyan;
       background-color: $btnHover;
       transform: translateY(-10px);
     }

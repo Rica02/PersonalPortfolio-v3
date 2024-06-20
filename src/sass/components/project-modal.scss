@@ -1,0 +1,113 @@
+@use '../constants' as *;
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: $bgBase;
+
+  .header {
+    display: flex;
+    padding: 15px;
+
+    h2 {
+      flex: 1;
+      font-size: $subheaderBig;
+      text-align: center;
+      font-weight: normal;
+      padding-bottom: 10px;
+      margin: 0 30px;
+      border-bottom: $highlightCyan 1px solid;
+    }
+
+    .icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+      color: white;
+      color: $highlightPink;
+      cursor: pointer;
+      transition: all 0.1s linear;
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+
+      &:hover {
+        color: white;
+        background-color: $highlightPink;
+      }
+    }
+
+    @media #{$mobile} {
+      h2 {
+        padding: 10px 0;
+        font-size: $subheaderSml;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 550px;
+
+      video,
+      img {
+        object-fit: contain;
+        max-height: 550px;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      gap: 15px;
+      padding: 20px;
+
+      img,
+      .video-container {
+        height: 110px;
+        width: auto;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(0.5);
+        }
+      }
+
+      .video-container {
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 30px;
+          height: 30px;
+          color: $highlightPink;
+        }
+      }
+
+      @media screen and (max-width: 1224px) {
+        img,
+        .video-container {
+          height: 90px;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { NavProvider } from './context/NavContext';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Skills from './pages/Skills';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <AboutMe />
       <Skills />
+      <Projects />
     </NavProvider>
   );
 }
