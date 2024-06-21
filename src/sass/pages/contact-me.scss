@@ -34,13 +34,14 @@
           margin-left: 10px;
           width: 100px;
           padding: 5px 10px;
-          border: $highlightCyan solid 1px;
+          border: $btnHover solid 1px;
           border-radius: 6px;
           transition: all 0.15s ease-in-out;
 
           &:hover {
             cursor: pointer;
             background-color: $btnHover;
+            border-color: $highlightCyan;
           }
         }
       }
@@ -73,7 +74,7 @@
       }
 
       .error {
-        border: 2px solid tomato;
+        border: 2px solid $error;
       }
 
       input[type='submit'] {
@@ -106,19 +107,23 @@
         p {
           text-align: center;
           margin: 0;
-          line-height: 200%;
-          a {
-            color: white;
-            margin: 3px;
+          line-height: 180%;
+
+          // a,
+          span {
+            color: $highlightCyan;
             text-decoration: none;
-            padding: 5px 8px;
-            border: $highlightCyan solid 1px;
+            padding: 5px;
+            border: transparent solid 1px;
             border-radius: 6px;
             transition: all 0.15s ease-in-out;
+            // margin: 3px;
+            // border: transparent solid 1px;
 
             &:hover {
               cursor: pointer;
               background-color: $btnHover;
+              // border: $highlightCyan solid 1px;
             }
           }
         }
@@ -128,10 +133,10 @@
         }
       }
       .success-text {
-        color: lightgreen;
+        color: $success;
       }
       .error-text {
-        color: tomato;
+        color: $error;
       }
     }
 
@@ -145,7 +150,6 @@
         .success-text,
         .error-text {
           p {
-            // line-height: 180%;
             font-size: $bodySml;
           }
         }

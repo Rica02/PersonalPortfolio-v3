@@ -149,15 +149,19 @@ const ContactMe = () => {
               value={`${emailIsSending ? 'SENDING . . .' : 'SEND MESSAGE'}`}
               disabled={emailIsSending}
             />
+
+            {/* Success message */}
             <div className={`success-text ${emailSent ? 'visible' : ''}`}>
               <p>
                 Your message was successfully sent, thank you!
                 <br />I will get back to you as soon as possible.
               </p>
             </div>
+
+            {/* Error message */}
             <div className={`error-text ${error ? 'visible' : ''}`}>
               <p>
-                Hmm something went wrong with form. How about you shoot me a
+                {/* Hmm something went wrong with the form. How about you shoot me a
                 message on{' '}
                 <a
                   href="https://www.linkedin.com/in/ricamaeaverion/"
@@ -166,7 +170,17 @@ const ContactMe = () => {
                 >
                   LinkedIn
                 </a>{' '}
-                for now? Sorry about that!
+                instead? Sorry about that! */}
+                Hmm that didn't work, sorry about that! You can shoot me a
+                message directly at{' '}
+                <span
+                  onClick={() =>
+                    window.open('mailto:ricamaeaverion22@gmail.com', '_blank')
+                  }
+                >
+                  ricamaeaverion22@gmail.com
+                </span>{' '}
+                instead.
               </p>
             </div>
           </form>
