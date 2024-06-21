@@ -6,7 +6,11 @@ import { HiDocumentText } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { useNav } from '../hooks/useNav';
 import resumeFile from '../assets/resume.pdf';
-import comfImg from '../assets/comf.png';
+import comfImg1 from '../assets/images/comf-1.png';
+import comfImg2 from '../assets/images/comf-2.png';
+import comfImg3 from '../assets/images/comf-3.png';
+import comfImg4 from '../assets/images/comf-4.png';
+import comfImg5 from '../assets/images/comf-5.png';
 
 const Home = () => {
   const homeRef = useNav('home');
@@ -38,6 +42,45 @@ const Home = () => {
     );
   };
 
+  const ImageAnimation = () => {
+    const imgFrames = [comfImg1, comfImg2, comfImg3, comfImg4, comfImg5];
+    const [hovering, setHovering] = useState(false);
+    const [currentImg, setCurrentImg] = useState(0);
+
+    useEffect(() => {
+      // Preload images
+      for (const image of imgFrames) {
+        const imageElement = new Image();
+        imageElement.src = image;
+      }
+      // eslint-disable-next-line
+    }, []);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        if (hovering) {
+          setCurrentImg((prev) =>
+            prev < imgFrames.length - 1 ? prev + 1 : prev
+          );
+        } else {
+          setCurrentImg(0);
+        }
+      }, 75);
+
+      return () => clearInterval(interval);
+      // eslint-disable-next-line
+    }, [hovering]);
+
+    return (
+      <img
+        src={imgFrames[currentImg]}
+        alt="drawing of me"
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+      />
+    );
+  };
+
   return (
     <section id="home" ref={homeRef}>
       <div className="home-container">
@@ -59,7 +102,7 @@ const Home = () => {
           <div className="bg-text-container">
             <HelloWorldText />
             <div className="img-container">
-              <img src={comfImg} alt="drawing of me" />
+              <ImageAnimation />
             </div>
           </div>
         </div>

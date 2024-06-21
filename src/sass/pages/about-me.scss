@@ -64,6 +64,7 @@
     transition: all 0.3s;
 
     &:hover {
+      cursor: default;
       border-color: $highlightCyan;
       background-color: $btnHover;
       transform: translateY(-10px);

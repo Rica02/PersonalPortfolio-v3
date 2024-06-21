@@ -7,6 +7,7 @@ import AboutMe from './pages/AboutMe';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import ContactMe from './pages/ContactMe';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Projects />
       <ContactMe />
+      <Footer />
     </NavProvider>
   );
 }

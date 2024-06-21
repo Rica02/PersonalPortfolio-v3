@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../sass/components/navbar.scss';
 import { IoCloseSharp, IoMenuSharp } from 'react-icons/io5';
-import { MdEmail } from 'react-icons/md';
+import { FaGithub } from 'react-icons/fa';
+import { IoMail } from 'react-icons/io5';
 import { HiDocumentText } from 'react-icons/hi';
-import { FaLinkedin } from 'react-icons/fa';
+import { BiLogoLinkedin } from 'react-icons/bi';
 import { NavContext } from '../context/NavContext';
 import resumeFile from '../assets/resume.pdf';
 
@@ -63,19 +64,8 @@ const Navbar = () => {
           />
         </div>
         <div>
-          <p>contact</p>
-          <MdEmail
-            className="icon"
-            onClick={() =>
-              document
-                .getElementById('contactme')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-          />
-        </div>
-        <div>
           <p>linkedin</p>
-          <FaLinkedin
+          <BiLogoLinkedin
             className="icon"
             onClick={() => {
               window.open(
@@ -83,6 +73,26 @@ const Navbar = () => {
                 '_blank'
               );
             }}
+          />
+        </div>
+        <div>
+          <p>github</p>
+          <FaGithub
+            className="icon"
+            onClick={() => {
+              window.open('https://github.com/Rica02', '_blank');
+            }}
+          />
+        </div>
+        <div>
+          <p>contact</p>
+          <IoMail
+            className="icon"
+            onClick={() =>
+              document
+                .getElementById('contactme')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
           />
         </div>
       </div>
