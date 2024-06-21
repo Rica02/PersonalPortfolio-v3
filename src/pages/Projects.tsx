@@ -33,6 +33,30 @@ const Projects = () => {
     setSelectedMedia(1);
   };
 
+  const LoadingText = () => {
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCounter((prevCounter) => {
+          const newCounter = prevCounter === 3 ? 0 : prevCounter + 1;
+          return newCounter;
+        });
+      }, 500);
+
+      return () => clearInterval(interval);
+    }, []);
+
+    return (
+      <p className="txtFaded bgText">
+        loading
+        <span className={`${counter > 0 && counter < 4 ? 'on' : ''}`}> .</span>
+        <span className={`${counter > 1 && counter < 4 ? 'on' : ''}`}> .</span>
+        <span className={`${counter > 2 && counter < 4 ? 'on' : ''}`}> .</span>
+      </p>
+    );
+  };
+
   const ProjectCard = (project: Project) => {
     return (
       <div className="project-card" onClick={() => onProjectClick(project)}>
@@ -62,6 +86,7 @@ const Projects = () => {
 
   return (
     <section id="projects" ref={projectsRef}>
+      {/* Project details modal */}
       <div className={`modal-container ${modalActive ? 'modal-active' : ''}`}>
         <ProjectModal
           selectedProject={selectedProject}
@@ -70,7 +95,6 @@ const Projects = () => {
           setSelectedMedia={setSelectedMedia}
         />
       </div>
-
       <div
         className={`dark-overlay ${modalActive ? 'overlay-active' : ''}`}
         onClick={onProjectClose}
@@ -78,11 +102,16 @@ const Projects = () => {
       <header className="projects-header">
         <h1>Projects</h1>
       </header>
+      {/* Project list */}
       <div className="projects-container">
         <div className="projects">
           {ProjectList.map((project: Project, index) => (
             <ProjectCard {...project} key={index} />
           ))}
+        </div>
+        {/* Background text */}
+        <div className="bg-text">
+          <LoadingText />
         </div>
       </div>
     </section>

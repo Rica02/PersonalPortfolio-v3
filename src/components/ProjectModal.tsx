@@ -53,7 +53,7 @@ const ProjectModal = (props: ProjectModalProps) => {
               </p>
             </video>
           ) : (
-            <img src={source} alt={`${props.selectedProject?.title} image`} />
+            <img src={source} alt={`${props.selectedProject?.title}`} />
           )}
         </div>
         <div className="bottom">

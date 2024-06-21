@@ -1,0 +1,155 @@
+@use '../constants' as *;
+
+.contact-header {
+  background-color: $bgDarker;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgDarker;
+
+  .form-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgDarker;
+    width: 100%;
+    max-width: 1250px;
+    padding: 40px 0;
+
+    p {
+      text-align: center;
+      margin: 0 0 10px 0;
+
+      &.linkedin-text {
+        display: flex;
+        align-items: center;
+
+        img {
+          object-fit: contain;
+          margin-left: 10px;
+          width: 100px;
+          padding: 5px 10px;
+          border: $highlightCyan solid 1px;
+          border-radius: 6px;
+          transition: all 0.15s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $btnHover;
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      margin: 20px 0;
+
+      input {
+        padding: 10px 20px;
+        background-color: lightcyan;
+        border: none;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: $body;
+      }
+
+      textarea {
+        height: 200px;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        resize: vertical;
+        font-size: $body;
+        background-color: lightcyan;
+      }
+
+      .error {
+        border: 2px solid tomato;
+      }
+
+      input[type='submit'] {
+        color: $highlightCyan;
+        background: $bgBase;
+        border: $highlightCyan solid 1px;
+        border-radius: 6px;
+        padding: 10px 30px;
+        font-size: $body;
+        transition: all 0.15s ease-in-out;
+        justify-content: center;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $btnHover;
+        }
+
+        &:disabled {
+          cursor: wait;
+          background-color: $bgBase;
+        }
+      }
+
+      .success-text,
+      .error-text {
+        display: none;
+        justify-content: center;
+
+        p {
+          text-align: center;
+          margin: 0;
+          line-height: 200%;
+          a {
+            color: white;
+            margin: 3px;
+            text-decoration: none;
+            padding: 5px 8px;
+            border: $highlightCyan solid 1px;
+            border-radius: 6px;
+            transition: all 0.15s ease-in-out;
+
+            &:hover {
+              cursor: pointer;
+              background-color: $btnHover;
+            }
+          }
+        }
+
+        &.visible {
+          display: flex;
+        }
+      }
+      .success-text {
+        color: lightgreen;
+      }
+      .error-text {
+        color: tomato;
+      }
+    }
+
+    @media #{$tablet} {
+      padding: 25px;
+
+      form {
+        width: 100%;
+        max-width: 450px;
+
+        .success-text,
+        .error-text {
+          p {
+            // line-height: 180%;
+            font-size: $bodySml;
+          }
+        }
+      }
+    }
+  }
+}

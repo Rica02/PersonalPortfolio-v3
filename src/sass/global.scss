@@ -97,21 +97,19 @@ header {
   }
 }
 
-@media #{$laptop} {
-  // Scrollbar container
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
+// Scrollbar container
+::-webkit-scrollbar {
+  width: 6px;
+}
 
-  // Scrollbar track
-  ::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px;
-  }
+// Scrollbar track
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
 
-  // Scrollbar thumb
-  ::-webkit-scrollbar-thumb {
-    background: $bgNavbar;
-    border-radius: 10px;
-  }
+// Scrollbar thumb
+::-webkit-scrollbar-thumb {
+  background: $bgNavbar;
+  border-radius: 10px;
 }

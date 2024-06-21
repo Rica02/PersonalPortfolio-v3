@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../sass/pages/skills.scss';
 import { useNav } from '../hooks/useNav';
 import { SkillLogos } from '../interfaces';
@@ -7,30 +7,6 @@ import { Logos } from '../content';
 const Skills = () => {
   const skillsRef = useNav('skills');
 
-  const LoadingText = () => {
-    const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCounter((prevCounter) => {
-          const newCounter = prevCounter === 3 ? 0 : prevCounter + 1;
-          return newCounter;
-        });
-      }, 500);
-
-      return () => clearInterval(interval);
-    }, []);
-
-    return (
-      <p className="txtFaded bgText">
-        loading
-        <span className={`${counter > 0 && counter < 4 ? 'on' : ''}`}> .</span>
-        <span className={`${counter > 1 && counter < 4 ? 'on' : ''}`}> .</span>
-        <span className={`${counter > 2 && counter < 4 ? 'on' : ''}`}> .</span>
-      </p>
-    );
-  };
-
   // Skills table
   const Skills = () => {
     return (
@@ -38,7 +14,7 @@ const Skills = () => {
         {Object.keys(Logos).map((key, index) => (
           <div
             className={`table-row ${
-              index % 2 == 0 ? 'right-to-left' : 'left-to-right'
+              index % 2 === 0 ? 'right-to-left' : 'left-to-right'
             }`}
             key={key}
           >
@@ -79,10 +55,6 @@ const Skills = () => {
           <div className="table-container">
             <Skills />
           </div>
-        </div>
-        {/* Background text */}
-        <div className="bg-text">
-          <LoadingText />
         </div>
       </div>
     </section>

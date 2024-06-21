@@ -39,3 +39,15 @@ export interface Project {
   tools: string[];
   gallery: Media[];
 }
+
+export interface ContactFormValues {
+  user_name: string; // must match property names on EmailJS setup
+  user_email: string;
+  message: string;
+}
+
+export interface ContactFormError {
+  user_name: boolean;
+  user_email: boolean;
+  message: boolean;
+}
