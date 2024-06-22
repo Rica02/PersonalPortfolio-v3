@@ -11,6 +11,7 @@ import comfImg2 from '../assets/images/comf-2.png';
 import comfImg3 from '../assets/images/comf-3.png';
 import comfImg4 from '../assets/images/comf-4.png';
 import comfImg5 from '../assets/images/comf-5.png';
+import comfImgMobile from '../assets/images/comf-portrait.png';
 
 const Home = () => {
   const homeRef = useNav('home');
@@ -87,9 +88,8 @@ const Home = () => {
         <div className="top-container">
           {/* Introduction */}
           <div className="intro-container">
-            <p>Hey there!</p>
-            <p className="name">
-              I'm <span className="txtHighlightPink">Rica</span>.
+            <p>
+              Hey there! I'm <span className="txtHighlightPink">Rica</span>.
             </p>
             <h1>FRONT-END SOFTWARE ENGINEER</h1>
             <p className="titles">
@@ -98,7 +98,7 @@ const Home = () => {
               Design & Development
             </p>
           </div>
-          {/* Background text */}
+          {/* Background text & drawing */}
           <div className="bg-text-container">
             <HelloWorldText />
             <div className="img-container">
@@ -106,8 +106,18 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* Drawing for small laptop */}
+        <div className="drawing-tablet">
+          <img src={comfImgMobile} alt="drawing of me" />
+        </div>
+
+        {/* Drawing for mobile */}
+        <div className="drawing-mobile">
+          <img src={comfImgMobile} alt="drawing of me" />
+        </div>
+
+        {/* Buttons */}
         <div className="bottom-container">
-          {/* Buttons */}
           <div className="button-group">
             <button
               onClick={() => {
@@ -150,9 +160,11 @@ const Home = () => {
           >
             <BsMouseFill />
           </div>
-          <div className="bg-text-container-small">
-            <HelloWorldText />
-          </div>
+        </div>
+
+        {/* Background text for mobile */}
+        <div className="bg-text-container-mobile">
+          <HelloWorldText />
         </div>
       </div>
     </section>

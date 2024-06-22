@@ -5,6 +5,10 @@
   flex-direction: column;
   height: 100vh;
 
+  @media #{$mobile} {
+    height: 825px;
+  }
+
   .top-container {
     display: flex;
     flex: 1;
@@ -21,16 +25,12 @@
       h1 {
         font-weight: normal;
         font-size: 38px;
-        margin: 0 0 15px 0;
+        margin: 10px 0;
       }
 
       p {
         font-size: 28px;
-        margin: 0 0 15px 0;
 
-        &.name {
-          font-size: 35px;
-        }
         &.titles {
           line-height: 1.6em;
         }
@@ -63,33 +63,78 @@
     }
 
     @media #{$laptop} {
+      .intro-container {
+        justify-content: flex-end;
+
+        h1 {
+          font-size: 30px;
+        }
+      }
       .bg-text-container {
         display: none;
       }
     }
 
     @media #{$mobile} {
+      flex: 2;
+      background-color: $bgDarker;
       .intro-container {
-        position: relative;
-        padding-top: 50px;
+        padding: 0 20px;
 
         h1 {
-          font-size: 25px;
-          margin: 0 0 15px 0;
+          font-size: 24px;
+          margin: 15px 0;
         }
 
         p {
-          font-size: 16px;
+          font-size: 20px;
           margin: 0 0 15px 0;
 
-          &.name {
-            font-size: 20px;
-          }
           &.titles {
             line-height: 1.6em;
           }
         }
       }
+    }
+  }
+
+  .drawing-tablet {
+    display: none;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: $bgDarker;
+
+    img {
+      object-fit: contain;
+      width: 275px;
+      height: 275px;
+    }
+
+    @media #{$laptop} {
+      display: flex;
+    }
+
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
+  .drawing-mobile {
+    display: none;
+    flex: 1.5;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgDarker;
+
+    img {
+      object-fit: contain;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media #{$mobile} {
+      display: flex;
     }
   }
 
@@ -155,35 +200,34 @@
       }
     }
 
-    .bg-text-container-small {
-      display: none;
+    @media #{$laptop} {
+      flex: 0.6;
     }
 
     @media #{$mobile} {
+      flex: 1;
       background-color: $bgDarker;
 
       .button-group {
-        align-content: flex-start;
         button {
-          font-size: 12px;
+          font-size: 14px;
           width: 120px;
-          height: 28px;
+          height: 30px;
         }
       }
-
-      .bg-text-container-small {
-        display: flex;
-        position: absolute;
-        font-size: 20px;
-        bottom: 0px;
-        right: 15px;
-      }
     }
+  }
 
-    @media #{$tablet} {
-      .mouse-icon {
-        display: none;
-      }
+  .bg-text-container-mobile {
+    display: none;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0 15px;
+    font-size: 20px;
+    background-color: $bgDarker;
+
+    @media #{$mobile} {
+      display: flex;
     }
   }
 }
