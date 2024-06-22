@@ -2,7 +2,7 @@
 
 Website developed as a portfolio to showcase my skills and work. Designed and developed by me from scratch using React and TypeScript.
 
-Version 1.0 - update dd/mm/yy:
+Version 1.0 - update 22/06/24:
 
 - Initial release
 
@@ -10,7 +10,8 @@ Version 1.0 - update dd/mm/yy:
 
 ## Tools used
 
-- Framework: ReactJS
+- Library: ReactJS
 - Language: TypeScript & HTML
 - Styling: CSS & SASS
 - Hosting: Netlify
+- Other services: EmailJS
