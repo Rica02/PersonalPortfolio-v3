@@ -11,7 +11,6 @@ Version 1.0 - update 22/06/24:
 ## Tools used
 
 - Library: ReactJS
-- Language: TypeScript & HTML
-- Styling: CSS & SASS
+- Language: TypeScript
 - Hosting: Netlify
 - Other services: EmailJS
