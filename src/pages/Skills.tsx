@@ -42,13 +42,17 @@ const Skills = () => {
           {/* Description */}
           <div className="description">
             <p>
-              I have front-development experience in web, mobile apps and games,
-              as well as UI/UX design and development.
+              I have Front-End Development experience in Web and Mobile Apps,
+              and I'm also familiar with Game Development. I'm particularly
+              passionate about UI/UX Design and Development, where I focus on
+              creating intuitive UI and engaging user experiences.
               <br />
               <br />
-              I've worked on a variety of projects, gaining diverse and valuable
-              skills encompassing web, mobile apps and games. I'm particularly
-              passionate about UI/UX design and development.
+              My most valuable skills are my ability to be flexibile and learn
+              quickly, which enable me to easily adapt in fast-paced
+              environments and changing requirements, and with a proative
+              approach and effective teamwork, I'm able to contribute positvely
+              to reach project success with my team.
             </p>
           </div>
           {/* Skills table */}

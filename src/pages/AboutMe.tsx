@@ -67,7 +67,7 @@ const AboutMe = () => {
             <br />
             <br />
             I'm continuously striving to improve, pushing myself out of my
-            comfort zone, and tackle new challenges. I learned to be flexible
+            comfort zone, and tackling new challenges. I learned to be flexible
             and open minded, as well as an effective team worker and a problem
             solver.
           </p>

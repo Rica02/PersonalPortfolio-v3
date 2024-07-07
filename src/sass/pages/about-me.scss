@@ -22,6 +22,10 @@
         font-size: $title;
       }
     }
+
+    @media #{$mobile} {
+      max-width: 650px;
+    }
   }
 
   .cards-group {

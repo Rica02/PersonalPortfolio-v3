@@ -40,7 +40,7 @@ import ptMeta9 from './assets/projects/pt-metaverse-gallery-9.png';
 
 import ptAiLogo from './assets/projects/pt-ai-logo.png';
 import ptAiImg from './assets/projects/pt-ai-img.png';
-import ptAi1 from './assets/projects/pt-ai-gallery-1.mov';
+import ptAi1 from './assets/projects/pt-ai-gallery-1.mp4';
 import ptAi2 from './assets/projects/pt-ai-gallery-2.mov';
 import ptAi3 from './assets/projects/pt-ai-gallery-3.png';
 import ptAi4 from './assets/projects/pt-ai-gallery-4.png';
@@ -59,6 +59,7 @@ import scusami2 from './assets/projects/scusami-gallery-2.png';
 import scusami3 from './assets/projects/scusami-gallery-3.png';
 
 import portfolioLogo from './assets/projects/portfolio-logo.png';
+import portfolio1 from './assets/projects/portfolio-gallery-1.mov';
 import portfolio2 from './assets/projects/portfolio-gallery-2.png';
 
 import techConnectLogo from './assets/projects/techconnect-logo.png';
@@ -190,7 +191,7 @@ export const ProjectList: Project[] = [
       { src: ptAi3, isVideo: false },
       { src: ptAi4, isVideo: false },
       { src: ptAi5, isVideo: false },
-      { src: ptAi6, isVideo: false },
+      // { src: ptAi6, isVideo: false },
     ],
   },
   {
@@ -238,6 +239,7 @@ export const ProjectList: Project[] = [
     tools: ['TypeScript', 'React', 'Web'],
     gallery: [
       { src: portfolioLogo, isVideo: false },
+      { src: portfolio1, isVideo: true },
       { src: portfolio2, isVideo: false },
     ],
   },

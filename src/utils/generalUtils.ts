@@ -18,14 +18,14 @@ export const sendAnalyticsEvent = (
   }
 ) => {
   if (parameters) {
-    console.log(
-      `Sending analytics event ${eventName} with parameters ${JSON.stringify(
-        parameters
-      )}`
-    );
+    // console.log(
+    //   `Sending analytics event ${eventName} with parameters ${JSON.stringify(
+    //     parameters
+    //   )}`
+    // );
     ReactGA.event(eventName, parameters);
   } else {
-    console.log(`Sending analytics event ${eventName}`);
+    // console.log(`Sending analytics event ${eventName}`);
     ReactGA.event(eventName);
   }
 };

@@ -29,6 +29,10 @@
         max-width: 900px;
         line-height: 150%;
       }
+
+      @media #{$mobile} {
+        max-width: 650px;
+      }
     }
 
     .table-container {
