@@ -45,7 +45,7 @@ import ptAi2 from './assets/projects/pt-ai-gallery-2.mov';
 import ptAi3 from './assets/projects/pt-ai-gallery-3.png';
 import ptAi4 from './assets/projects/pt-ai-gallery-4.png';
 import ptAi5 from './assets/projects/pt-ai-gallery-5.png';
-import ptAi6 from './assets/projects/pt-ai-gallery-6.png';
+// import ptAi6 from './assets/projects/pt-ai-gallery-6.png';
 
 import ptGolfLogo from './assets/projects/pt-golf-logo.png';
 import ptGolfImg from './assets/projects/pt-golf-img.png';
