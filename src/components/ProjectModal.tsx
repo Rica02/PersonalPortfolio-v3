@@ -76,6 +76,7 @@ const ProjectModal = (props: ProjectModalProps) => {
               </div>
             ) : (
               <img
+                key={index}
                 src={media.src}
                 alt={`${props.selectedProject?.title} thumbnail`}
                 onClick={() => changeSelectedMedia(index)}

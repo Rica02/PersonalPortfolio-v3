@@ -12,6 +12,10 @@
   font-family: Roboto, 'Open Sans', sans-serif;
 }
 
+body {
+  background-color: $bgDarker;
+}
+
 section,
 footer {
   color: white;
@@ -23,7 +27,6 @@ footer {
 }
 
 header {
-  // background-color: $bgLighter;
   display: flex;
   align-items: center;
   height: 90px;

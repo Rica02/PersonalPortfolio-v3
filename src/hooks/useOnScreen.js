@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 // Checks if section ID given is the one in view
 export const useOnScreen = (ref) => {
@@ -8,7 +8,7 @@ export const useOnScreen = (ref) => {
     ([entry]) => {
       setIsOnScreen(entry.isIntersecting);
     },
-    { threshold: 0.7 } // Set value if section is in 70% of screen
+    { threshold: 0.1 } // Set value if 10% of section is on screen
   );
 
   useEffect(() => {

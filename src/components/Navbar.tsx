@@ -6,7 +6,8 @@ import { IoMail } from 'react-icons/io5';
 import { HiDocumentText } from 'react-icons/hi';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { NavContext } from '../context/NavContext';
-import resumeFile from '../assets/resume.pdf';
+import { EXTERNAL_LINKS } from '../constants';
+import { openExternalLink } from '../utils/generalUtils';
 
 const Navbar = () => {
   const { activeLinkId } = useContext(NavContext); // Current section ID in view
@@ -58,30 +59,21 @@ const Navbar = () => {
           <p>resume</p>
           <HiDocumentText
             className="icon"
-            onClick={() => {
-              window.open(resumeFile, '_blank');
-            }}
+            onClick={() => openExternalLink(EXTERNAL_LINKS.RESUME)}
           />
         </div>
         <div>
           <p>linkedin</p>
           <BiLogoLinkedin
             className="icon"
-            onClick={() => {
-              window.open(
-                'https://www.linkedin.com/in/ricamaeaverion/',
-                '_blank'
-              );
-            }}
+            onClick={() => openExternalLink(EXTERNAL_LINKS.LINKEDIN)}
           />
         </div>
         <div>
           <p>github</p>
           <FaGithub
             className="icon"
-            onClick={() => {
-              window.open('https://github.com/Rica02', '_blank');
-            }}
+            onClick={() => openExternalLink(EXTERNAL_LINKS.GITHUB)}
           />
         </div>
         <div>

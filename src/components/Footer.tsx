@@ -4,7 +4,8 @@ import { FaGithub } from 'react-icons/fa';
 import { IoMail } from 'react-icons/io5';
 import { HiDocumentText } from 'react-icons/hi';
 import { BiLogoLinkedin } from 'react-icons/bi';
-import resumeFile from '../assets/resume.pdf';
+import { openExternalLink } from '../utils/generalUtils';
+import { EXTERNAL_LINKS } from '../constants';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,29 +13,20 @@ const Footer = () => {
     <footer>
       <div className="top">
         <div>
-          <HiDocumentText onClick={() => window.open(resumeFile, '_blank')} />
+          <HiDocumentText
+            onClick={() => openExternalLink(EXTERNAL_LINKS.RESUME)}
+          />
         </div>
         <div>
           <BiLogoLinkedin
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/in/ricamaeaverion/',
-                '_blank'
-              )
-            }
+            onClick={() => openExternalLink(EXTERNAL_LINKS.LINKEDIN)}
           />
         </div>
         <div>
-          <FaGithub
-            onClick={() => window.open('https://github.com/Rica02', '_blank')}
-          />
+          <FaGithub onClick={() => openExternalLink(EXTERNAL_LINKS.GITHUB)} />
         </div>
         <div>
-          <IoMail
-            onClick={() =>
-              window.open('mailto:ricamaeaverion22@gmail.com', '_blank')
-            }
-          />
+          <IoMail onClick={() => openExternalLink(EXTERNAL_LINKS.EMAIL)} />
         </div>
       </div>
       <div className="bottom">

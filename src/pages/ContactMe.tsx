@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser';
 import { useNav } from '../hooks/useNav';
 import { ContactFormError, ContactFormValues } from '../interfaces';
 import linkedinImg from '../assets/images/linkedin-logo.png';
+import { EXTERNAL_LINKS } from '../constants';
+import { openExternalLink } from '../utils/generalUtils';
 
 const ContactMe = () => {
   const contactMeRef = useNav('contactme');
@@ -98,9 +100,7 @@ const ContactMe = () => {
       <img
         src={linkedinImg}
         alt="LinkedIn"
-        onClick={() =>
-          window.open('https://www.linkedin.com/in/ricamaeaverion/', '_blank')
-        }
+        onClick={() => openExternalLink(EXTERNAL_LINKS.LINKEDIN)}
       />
     );
   };
@@ -173,11 +173,7 @@ const ContactMe = () => {
                 instead? Sorry about that! */}
                 Hmm that didn't work, sorry about that! You can shoot me a
                 message directly at{' '}
-                <span
-                  onClick={() =>
-                    window.open('mailto:ricamaeaverion22@gmail.com', '_blank')
-                  }
-                >
+                <span onClick={() => openExternalLink(EXTERNAL_LINKS.EMAIL)}>
                   ricamaeaverion22@gmail.com
                 </span>{' '}
                 instead.

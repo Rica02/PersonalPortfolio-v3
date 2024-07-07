@@ -5,13 +5,14 @@ import { BsMouseFill } from 'react-icons/bs';
 import { HiDocumentText } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { useNav } from '../hooks/useNav';
-import resumeFile from '../assets/resume.pdf';
 import comfImg1 from '../assets/images/comf-1.png';
 import comfImg2 from '../assets/images/comf-2.png';
 import comfImg3 from '../assets/images/comf-3.png';
 import comfImg4 from '../assets/images/comf-4.png';
 import comfImg5 from '../assets/images/comf-5.png';
 import comfImgMobile from '../assets/images/comf-portrait.png';
+import { openExternalLink } from '../utils/generalUtils';
+import { EXTERNAL_LINKS } from '../constants';
 
 const Home = () => {
   const homeRef = useNav('home');
@@ -119,22 +120,11 @@ const Home = () => {
         {/* Buttons */}
         <div className="bottom-container">
           <div className="button-group">
-            <button
-              onClick={() => {
-                window.open(resumeFile, '_blank');
-              }}
-            >
+            <button onClick={() => openExternalLink(EXTERNAL_LINKS.RESUME)}>
               <HiDocumentText />
               RESUME
             </button>
-            <button
-              onClick={() => {
-                window.open(
-                  'https://www.linkedin.com/in/ricamaeaverion/',
-                  '_blank'
-                );
-              }}
-            >
+            <button onClick={() => openExternalLink(EXTERNAL_LINKS.LINKEDIN)}>
               <FaLinkedin />
               LINKEDIN
             </button>

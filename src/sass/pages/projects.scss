@@ -158,6 +158,8 @@
   }
 
   @media #{$laptop} {
+    width: 90dvw;
+    height: 90vh;
     max-height: unset;
   }
 

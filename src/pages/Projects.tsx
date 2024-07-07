@@ -4,6 +4,8 @@ import { useNav } from '../hooks/useNav';
 import { Project } from '../interfaces';
 import { ProjectList } from '../content';
 import ProjectModal from '../components/ProjectModal';
+import { sendAnalyticsEvent } from '../utils/generalUtils';
+import { ANALYTICS_EVENTS } from '../constants';
 
 const Projects = () => {
   const projectsRef = useNav('projects');
@@ -24,6 +26,9 @@ const Projects = () => {
   const onProjectClick = (project: Project) => {
     setModalActive(true);
     setSelectedProject(project);
+    sendAnalyticsEvent(ANALYTICS_EVENTS.OPENED_PROJECT, {
+      project_name: project.title,
+    });
   };
 
   // Close modal and reset selected project

@@ -1,6 +1,6 @@
-import { useContext, useEffect, useRef } from "react";
-import { NavContext } from "../context/NavContext";
-import { useOnScreen } from "./useOnScreen";
+import { useContext, useEffect, useRef } from 'react';
+import { NavContext } from '../context/NavContext';
+import { useOnScreen } from './useOnScreen';
 
 // Get value of current section ID
 export const useNav = (navLinkId) => {
