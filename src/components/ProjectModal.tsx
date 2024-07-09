@@ -65,7 +65,7 @@ const ProjectModal = (props: ProjectModalProps) => {
                 onClick={() => changeSelectedMedia(index)}
               >
                 <FaPlay />
-                <video height={'100%'} width={'100%'}>
+                <video>
                   <source src={media.src} type="video/mov" />
                   <source src={media.src} type="video/mp4" />
                   <p>

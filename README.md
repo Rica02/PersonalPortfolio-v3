@@ -2,7 +2,7 @@
 
 Website developed as a portfolio to showcase my skills and work. Designed and developed by me from scratch using React and TypeScript.
 
-Last updated 07/07/24 - Version 1.0.2
+Last updated 09/07/24 - Version 1.0.3
 
 ## [See it live here!](https://ricamaeaverion.netlify.app/)
 
@@ -11,4 +11,4 @@ Last updated 07/07/24 - Version 1.0.2
 - Library: ReactJS
 - Languages: TypeScript, HTML & CSS
 - Hosting: Netlify
-- Other services: EmailJS, Google Analytics
+- Other services: EmailJS

@@ -81,9 +81,14 @@
       padding: 20px;
 
       img,
-      .video-container {
+      .video-container,
+      .video-container video {
         height: 110px;
         width: auto;
+      }
+
+      img,
+      .video-container {
         position: relative;
         background-color: $bgDarker;
 
