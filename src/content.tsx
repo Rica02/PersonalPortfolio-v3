@@ -93,7 +93,7 @@ export const AboutMeCards: AboutMeCard[] = [
     icon: <GiBrain />,
     title: 'A LOVE FOR LEARNING',
     description:
-      "I'm very curious about science, art, nature and technology. I've always enjoyed learning new things and keeping my mind enganged.",
+      "I'm very curious about science, art, nature and technology. I've always enjoyed learning new things and keeping my mind engaged.",
   },
   {
     icon: <GiPaintBrush />,

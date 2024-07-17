@@ -48,10 +48,10 @@ const Skills = () => {
               creating intuitive UI and engaging user experiences.
               <br />
               <br />
-              My most valuable skills are my ability to be flexibile and learn
+              My most valuable skills are my ability to be flexible and learn
               quickly, which enable me to easily adapt in fast-paced
-              environments and changing requirements, and with a proative
-              approach and effective teamwork, I'm able to contribute positvely
+              environments and changing requirements, and with a proactive
+              approach and effective teamwork, I'm able to contribute positively
               to reach project success with my team.
             </p>
           </div>
