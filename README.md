@@ -2,7 +2,7 @@
 
 Website developed as a portfolio to showcase my skills and work. Designed and developed by me from scratch using React and TypeScript.
 
-Last updated 09/07/24 - Version 1.0.3
+Last updated 05/08/24 - Version 1.0.4
 
 ## [See it live here!](https://ricamaeaverion.netlify.app/)
 
