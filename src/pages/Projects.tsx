@@ -4,7 +4,7 @@ import { useNav } from '../hooks/useNav';
 import { Project } from '../interfaces';
 import { ProjectList } from '../content';
 import ProjectModal from '../components/ProjectModal';
-import { sendAnalyticsEvent } from '../utils/generalUtils';
+import { openExternalLink, sendAnalyticsEvent } from '../utils/generalUtils';
 import { ANALYTICS_EVENTS } from '../constants';
 
 const Projects = () => {
@@ -64,7 +64,16 @@ const Projects = () => {
 
   const ProjectCard = (project: Project) => {
     return (
-      <div className="project-card" onClick={() => onProjectClick(project)}>
+      <div
+        className="project-card"
+        onClick={() => {
+          if (project.title === 'Surgical XR') {
+            openExternalLink('https://www.surgicalxr.com/');
+          } else {
+            onProjectClick(project);
+          }
+        }}
+      >
         <img
           className="thumbnail"
           src={project.thumbnail}
@@ -83,7 +92,7 @@ const Projects = () => {
         </div>
 
         <div className="project-card-hover">
-          <div className="see-demo-text">SEE DEMO</div>
+          <div className="see-demo-text">see more</div>
         </div>
       </div>
     );

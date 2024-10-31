@@ -8,15 +8,16 @@ import logoHtml from './assets/logos/logo-html.png';
 import logoCss from './assets/logos/logo-css.png';
 import logoCSharp from './assets/logos/logo-c-sharp.png';
 import logoReact from './assets/logos/logo-react.jpg';
-import logoGit from './assets/logos/logo-git.png';
-
+// import logoGit from './assets/logos/logo-git.png';
+import logoNextjs from './assets/logos/logo-nextjs.png';
+import logoAWS from './assets/logos/logo-aws.png';
 import logoVscode from './assets/logos/logo-vscode.png';
 import logoVS from './assets/logos/logo-visual-studio.png';
 import logoAS from './assets/logos/logo-android-studio.png';
 import logoXcode from './assets/logos/logo-xcode.png';
 import logoUnity from './assets/logos/logo-unity.png';
 import logoNode from './assets/logos/logo-node.png';
-import logoNetlify from './assets/logos/logo-netlify.png';
+// import logoNetlify from './assets/logos/logo-netlify.png';
 
 import logoSQL from './assets/logos/logo-sql.png';
 import logoFB from './assets/logos/logo-firebase.png';
@@ -25,6 +26,9 @@ import logoXD from './assets/logos/logo-xd.png';
 import logoPS from './assets/logos/logo-photoshop.png';
 import logoAI from './assets/logos/logo-illustrator.png';
 import logoAffDes from './assets/logos/logo-affinity-designer.png';
+
+import sxrImg from './assets/projects/sxr-img.png';
+import sxrLogo from './assets/projects/sxr-logo.png';
 
 import ptMetaLogo from './assets/projects/pt-metaverse-logo.png';
 import ptMetaImg from './assets/projects/pt-metaverse-img.png';
@@ -117,20 +121,22 @@ export const Logos: SkillLogos = {
     { img: logoCss, name: 'CSS' },
     { img: logoCSharp, name: 'C#' },
     { img: logoReact, name: 'React' },
-    { img: logoUnity, name: 'Unity' },
+    { img: logoNextjs, name: 'Next.js' },
   ],
   secondRow: [
     { img: logoVscode, name: 'VS Code' },
     { img: logoVS, name: 'Visual Studio' },
     { img: logoAS, name: 'Android Studio' },
     { img: logoXcode, name: 'XCode' },
+    { img: logoUnity, name: 'Unity' },
+    { img: logoAWS, name: 'AWS' },
     { img: logoFB, name: 'Firebase' },
-    { img: logoNode, name: 'Node JS' },
-    { img: logoSQL, name: 'SQL' },
   ],
   thirdRow: [
-    { img: logoGit, name: 'Git' },
-    { img: logoNetlify, name: 'Netlify' },
+    // { img: logoGit, name: 'Git' },
+    // { img: logoNetlify, name: 'Netlify' },
+    { img: logoNode, name: 'Node JS' },
+    { img: logoSQL, name: 'SQL' },
     { img: logoFigma, name: 'Figma' },
     { img: logoXD, name: 'Adobe XD' },
     { img: logoPS, name: 'Photoshop' },
@@ -141,6 +147,23 @@ export const Logos: SkillLogos = {
 
 export const ProjectList: Project[] = [
   {
+    thumbnail: sxrImg,
+    logo: sxrLogo,
+    title: 'Surgical XR',
+    description:
+      'A proctoring platform for proceduralists to optimise procedures, enhance training, and improve outcomes through secure streaming.',
+    tools: [
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'TanStack Query',
+      'AWS',
+      'Node.js',
+    ],
+    gallery: [],
+  },
+  {
     thumbnail: ptMetaImg,
     logo: ptMetaLogo,
     title: 'Play Today. Metaverse',
@@ -148,13 +171,14 @@ export const ProjectList: Project[] = [
       'An open world 3D space tailored to golf enthusiasts where users can interact, socialise, and engage in various activities.',
     tools: [
       'TypeScript',
-      'JavaScript',
       'React',
+      'SASS',
       'C#',
       'Unity',
       'WebGL',
       'iOS',
       'Android',
+      'Firebase',
     ],
     // MAX 9 long images
     gallery: [
@@ -178,9 +202,9 @@ export const ProjectList: Project[] = [
       'Meet New Tom, an interactive AI powered chatbot who is an expert on golf rules and can answer any golf related question.',
     tools: [
       'TypeScript',
-      'JavaScript',
       'React',
       'Web',
+      'Node.js',
       'OpenAI',
       'ElevenLabs API',
     ],
@@ -206,6 +230,7 @@ export const ProjectList: Project[] = [
       'iOS',
       'Android',
       'Firebase',
+      'Node.js',
       'Google Maps API',
     ],
     gallery: [
@@ -236,7 +261,7 @@ export const ProjectList: Project[] = [
     title: 'Personal Portfolio',
     description:
       "Website developed from scratch as a portfolio to showcase my skills and work (you're looking at it!).",
-    tools: ['TypeScript', 'React', 'Web'],
+    tools: ['TypeScript', 'React', 'Web', 'Netlify'],
     gallery: [
       { src: portfolioLogo, isVideo: false },
       { src: portfolio1, isVideo: true },
@@ -249,7 +274,7 @@ export const ProjectList: Project[] = [
     title: 'TechConnect',
     description:
       'TechConnect is a website that provides tutoring services to users wanting to learn about tech devices.',
-    tools: ['JavaScript', 'React', 'Web', 'Zoom API'],
+    tools: ['JavaScript', 'React', 'Web', 'Node.js', 'Zoom API'],
     gallery: [
       { src: techConnectLogo, isVideo: false },
       { src: techConnect1, isVideo: true },
@@ -295,7 +320,7 @@ export const ProjectList: Project[] = [
     title: 'Bookworm Den',
     description:
       ' Bookworm Den is a simple online library where users can browse books, view book information and leave reviews.',
-    tools: ['JavaScript', 'React', 'Web', 'Node'],
+    tools: ['JavaScript', 'React', 'Web', 'Node.js'],
     gallery: [
       { src: bookwormLogo, isVideo: false },
       { src: bookworm1, isVideo: true },

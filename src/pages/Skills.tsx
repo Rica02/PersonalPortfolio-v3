@@ -42,17 +42,17 @@ const Skills = () => {
           {/* Description */}
           <div className="description">
             <p>
-              I have Front-End Development experience in Web and Mobile Apps,
-              and I'm also familiar with Game Development. I'm particularly
-              passionate about UI/UX Design and Development, where I focus on
-              creating intuitive UI and engaging user experiences.
+              My skills are varied, encompassing a range of platforms with a
+              focus on front-end development. While I'm particularly passionate
+              about UI/UX, my experience with various tools and languages allows
+              me to be a flexible developer, able to easily adapt to different
+              projects and stacks.
               <br />
               <br />
-              My most valuable skills are my ability to be flexible and learn
-              quickly, which enable me to easily adapt in fast-paced
-              environments and changing requirements, and with a proactive
-              approach and effective teamwork, I'm able to contribute positively
-              to reach project success with my team.
+              Having worked at the core of two startup companies, I bring
+              adaptability, a proactive approach, and strong teamwork skills,
+              which enable me thrive in fast-paced environments and contribute
+              meaningfully to team success and project outcomes.
             </p>
           </div>
           {/* Skills table */}

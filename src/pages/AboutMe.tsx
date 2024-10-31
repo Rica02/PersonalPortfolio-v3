@@ -61,8 +61,8 @@ const AboutMe = () => {
           <br />
           <p>
             I studied a Bachelor of IT at Academy of Interactive Technology
-            (AIT) in Melbourne, Australia. I graduated in 2022 with an Academic
-            Excellence Award. I have since worked on a variety of projects,
+            (AIT) in Melbourne, Australia. I graduated in 2022 with academic
+            excellence Award, and I have since worked on a variety of projects,
             gaining diverse and valuable skills.
             <br />
             <br />
